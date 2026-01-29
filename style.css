@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 900px;
+    width: 900px;
+    border: 1px solid;
+    margin-bottom: 25px;
+
+}
+
+.grid-item {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid-item:hover {
+    background-color: aqua;
+}
