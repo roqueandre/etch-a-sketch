@@ -1,9 +1,10 @@
 const btn = document.querySelector("button");
 const container = document.querySelector(".container");
 const reset = document.querySelector(".reset");
-let gridy = document.querySelector(".grid-item");
 
 
+
+// Create grid and add random color
 function createGrid(size, total) {
     for (let i = 0; i < total; i++) {
         let grid = document.createElement("div");
@@ -12,8 +13,16 @@ function createGrid(size, total) {
         grid.style.height = `${100 / size}%`;
         btn.value = size;
         container.appendChild(grid);
+
+        grid.addEventListener("mouseover", () => {
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            grid.style.backgroundColor = `rgb(${red},${green},${blue})`
+        });
     }
 };
+
 
 function destroyGrid () {
     let grid = document.querySelectorAll(".grid-item")
@@ -22,7 +31,7 @@ function destroyGrid () {
     });  
 }
 
-
+// Destroy grid first then prompt user to select squares
 btn.addEventListener("click", () => {
     destroyGrid();
     let option = prompt("Choose the number of squares per side: ");

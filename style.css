@@ -33,7 +33,3 @@ body {
     align-items: center;
     
 }
-
-.grid-item:hover {
-    background-color: aqua;
-}
