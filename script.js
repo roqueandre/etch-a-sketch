@@ -21,8 +21,7 @@ function createGrid(size, total) {
 
                
         grid.addEventListener("mouseover", () => {
-            grid.style.backgroundColor = `rgb(${red},${green},${blue})`;
-            grid.style.opacity = `${opac}%`
+            grid.style.backgroundColor = `rgba(${red},${green},${blue}, ${opac}%)`;
             opac += 10; 
         });
     }
