@@ -14,13 +14,20 @@ function createGrid(size, total) {
         btn.value = size;
         container.appendChild(grid);
 
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        let opac = 10;
+
+               
         grid.addEventListener("mouseover", () => {
-            let red = Math.floor(Math.random() * 256);
-            let green = Math.floor(Math.random() * 256);
-            let blue = Math.floor(Math.random() * 256);
-            grid.style.backgroundColor = `rgb(${red},${green},${blue})`
+            grid.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            grid.style.opacity = `${opac}%`
+            opac += 10; 
         });
     }
+
+
 };
 
 

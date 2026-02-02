@@ -14,6 +14,7 @@ body {
 .header {
     width: 100%;
     text-align: center;
+    margin: 10px;
 }
 
 .container {
@@ -32,4 +33,14 @@ body {
     justify-content: center;
     align-items: center;
     
+    
+}
+
+button {
+    background-color: rgba(139, 133, 133, 0.308);
+    border-radius: 5px;
+    border-style:outset;
+    margin-top: 10px;
+    width: 100px;
+    padding: 5px;
 }
